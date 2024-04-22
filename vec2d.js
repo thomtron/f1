@@ -32,7 +32,6 @@ export class vec2d
     
     normalize() {
         let L = this.norm();
-        console.log(L);
         if(L>0.0) this.mul_self(1.0/L);
     }
 
