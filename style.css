@@ -2,11 +2,18 @@ body {
     margin: 0;
 }
 
-#container_track {
+#container {
     width: 100vw;
     height: 100vh;
     display: block;
     background-color: antiquewhite;
+}
+
+#container_track {
+    width: 100vw;
+    height: 100vh;
+    display: block;
+    background-color: aqua;
 }
 
 .area {
