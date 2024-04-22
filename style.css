@@ -8,3 +8,13 @@ body {
     display: block;
     background-color: antiquewhite;
 }
+
+.area {
+    fill: rgba(255,0,255,0.2);
+    cursor: pointer;
+}
+
+.area:hover {
+    fill: rgba(163, 0, 163, 0.2);
+}
+

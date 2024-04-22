@@ -11,17 +11,17 @@ export class vec2d
         }
     }
 
-    add(other) {
+    add_self(other) {
         this.x += other.x;
         this.y += other.y;
     }
     
-    subtract(other) {
+    sub_self(other) {
         this.x -= other.x;
         this.y -= other.y;
     }
     
-    multiply(scalar) {
+    mul_self(scalar) {
         this.x *= scalar;
         this.y *= scalar;
     }
@@ -31,19 +31,26 @@ export class vec2d
     }
     
     normalize() {
-        var L = norm();
-        if(L>0.0) mult(1.0/L);
+        let L = this.norm();
+        console.log(L);
+        if(L>0.0) this.mul_self(1.0/L);
     }
-    
-    subtr(other) {
-        var x = new vec2d(this);
-        x.subtract(other);
+
+    add(other) {
+        let x = new vec2d(this);
+        x.add_self(other);
         return x;
     }
     
-    mult(other) {
-        var x = new vec2d(this);
-        x.multiply(other);
+    sub(other) {
+        let x = new vec2d(this);
+        x.sub_self(other);
+        return x;
+    }
+    
+    mul(other) {
+        let x = new vec2d(this);
+        x.mul_self(other);
         return x;
     }
 };
